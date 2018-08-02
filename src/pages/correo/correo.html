@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Correo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2>{{ correoActual.asunto }}</h2>
+  <hr>
+  <ion-item>
+    <ion-avatar item-left>
+      <img [src]="'../../assets/imagenes/' + correoActual.nombre.charAt(0).toLowerCase() + '.gif'">
+    </ion-avatar>
+    <h2>{{ correoActual.nombre }}</h2>
+    <h3>{{ correoActual.fecha }}</h3>
+  </ion-item>
+  <p [innerHTML]="correoActual.mensaje"></p>
+  <hr>
+  <ion-row>
+    <ion-col>
+        <button ion-button clear (click)="mostrarModal('Replay')">
+          <div>
+            <ion-icon name="ios-undo-outline"></ion-icon>
+            <br>
+            <label>Replay</label>
+          </div>
+        </button>
+    </ion-col>
+    <ion-col>
+        <button ion-button clear (click)="mostrarModal('Replay All')">
+          <div>
+            <ion-icon name="ios-undo-outline"></ion-icon>
+            <ion-icon name="ios-undo-outline"></ion-icon>
+            <br>
+            <label>Replay All</label>
+          </div>
+        </button>
+    </ion-col>
+    <ion-col>
+        <button ion-button clear (click)="mostrarModal('Forward')">
+          <div>
+            <ion-icon name="ios-redo-outline"></ion-icon>
+            <br>
+            <label>Forward</label>
+          </div>
+        </button>
+    </ion-col>
+  </ion-row>
+</ion-content>
