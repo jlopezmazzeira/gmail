@@ -1,0 +1,23 @@
+mysql –u usuario_mysql -p nombre_bbdd < ruta_fichero_importación.sql
+
+mysqldump –u usuario_mysql -p nombre_bbdd > fichero_exportación.sql
+
+
+vi /etc/apache2/apache2.conf
+Update the file Replace "AllowOverride None" to "AllowOverride All"
+service apache2 restart
+a2enmod rewrite
+service apache2 restart
+
+
+composer create-project slim/slim-skeleton routing
+composer require firebase/php-jwt
+composer require lichtner/fluentpdo
+
+sudo gedit /etc/mysql/conf.d/mysql.cnf
+
+[mysqld]
+sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+
+
+sudo service mysql restart

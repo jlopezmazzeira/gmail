@@ -1,0 +1,31 @@
+Notas IONIC
+
+* ionic start nombreAPP tabs //tabs es el nombre del template, existen otros como blank, sidemenu, super y tutorial
+* ionic serve //Comando que se usa para levantar el servidor propio de ionic y poder visualizar la aplicación en el navegador
+* ionic g page nomnbrePagina //Comando para crear una página nueva desde la consola
+* para poder trabajar con las pantallas en ionic debemos colocar las paginas en declarations y entryComponents
+* Si queremos que nuestra página de inicio sea otra, debemos cambiar rootPage que se encuentra en app.component.ts, importamos 
+la página y cambiamos el valor de rootPage
+*Para enviar parámetros a través de una página a otra, lo podemos hacer como un objeto json o un string y debemos usar el NavParams
+* si agregamos una página que contengan los tabs y no queremos que la tab por default sea la primera, colocamos el atributo selectedIndex="Numero"
+en ion-tabs, los indices por 0
+* Si agregamos una página que contenga tabs debemos agregarla en el app.component.ts como página principal
+* Queremos agregar un menú lo debemos colocar en app.html
+* ionic cordova platform remove android //Comando que se usa para remover la plataforma de android
+* ionic cordova platform add android //Comando que se usa para añadir la plataforma de android
+* ionic cordova build android //Este comando es para crear la aplicación en modo depuración, en producción es distinto
+* ionic cordova emulate android //Comando para emular una maquina virtual de android, debemos tener instalado el android studio
+* ionic cordova run android --device //Si se encuentra abierto el android studio se ve en vivo lo que esta pasando
+* Los servicios en ionic se llaman providers y se generan de la siguiente forma: ionic g provider nombreProviders
+* Si ocurre un problema al instalar firebase, por las versiones hacemos lo siguiente, npm install @firebase/app@^0.1.6 --save, "angularfire2": "^5.0.0-rc.3",
+    "firebase": "^4.12.1" y estas dependencias.
+* Para generar un pipe, hacemos lo siguiente ionic g pipe nombrePipe. Los pipes son transformaciones que podemos hacer a cualquier dato desde nuestros templates, por ejemplo mostrar un texto en mayúscula, mostrar valores de moneda, formatos de fecha etc. 
+*A las páginas le podemos colocar alias en @IonicPage({ name: "mi-pagina3" }) y luego hacer referencia a esa página como this.navCtrl.push("mi-pagina3");
+
+AIzaSyCNHMLsE4ZiUd_lxcRJPZeh-YUhr_MGPyk
+
+* Para usar los servicios Http en ionic debemos modificar el HttpClient, quedando de la siguiente forma:
+	import { Http } from '@angular/http';
+	constructor(public http: Http) {
+
+	Esto para poder usar la respuesta json y el map.
